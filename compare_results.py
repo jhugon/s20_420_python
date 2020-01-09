@@ -22,10 +22,6 @@ def compare_results(results_names,results_values,results_uncertainties,accepted_
     yspacing = 1./(N-1)
     ax.margins(y=0.5*yspacing)
   if (not(accepted_value is None)) and (not (accepted_uncertainty is None)):
-    print(accepted_value)
-    print(accepted_uncertainty)
-    print(not(accepted_value is None))
-    print(not (accepted_uncertainty is None))
     ax.axvspan(accepted_value-accepted_uncertainty,accepted_value+accepted_uncertainty,fc='c')
   if not (accepted_value is None):
     ax.axvline(accepted_value,c='k',ls="-")
