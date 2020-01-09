@@ -3,7 +3,7 @@
 import scipy
 import scipy.stats
 
-def linearFit(x,y,printinfo=True):
+def linear_fit(x,y,printinfo=True):
     """
     Returns slope, intercept, slope error, intercept error, y error
 
@@ -15,7 +15,7 @@ def linearFit(x,y,printinfo=True):
         if you have 1D arrays of x and y values in variables x and y:
         call like:
 
-        slope, intercept, slopeerror, intercepterror, yerr = linearFit(x,y)
+        slope, intercept, slopeerror, intercepterror, yerr = linear_fit(x,y)
         
     """
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
       #plt.plot(x,yobs,".k")
       #plt.plot(x,ytrue,":b")
       #plt.savefig("data.png")
-      slope, intercept, slopeerror, intercepterror, yerr = linearFit(x,yobs)
+      slope, intercept, slopeerror, intercepterror, yerr = linear_fit(x,yobs)
       slopezs.append((slope-slopetrue)/slopeerror)
       interceptzs.append((intercept-intercepttrue)/intercepterror)
       yerrratio.append(yerr**2/errortrue**2)
